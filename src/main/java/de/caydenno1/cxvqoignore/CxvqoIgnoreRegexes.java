@@ -13,7 +13,7 @@ public class CxvqoIgnoreRegexes {
 		patterns.add(Pattern.compile("(?:.*cxvqo.*)", Pattern.CASE_INSENSITIVE));
 		patterns.add(Pattern.compile("(?:.*denisapain.*)", Pattern.CASE_INSENSITIVE));
 	}
-
+ 
 	public static void add(String regex) throws PatternSyntaxException {
 		patterns.add(Pattern.compile(regex, Pattern.CASE_INSENSITIVE));
 	}
