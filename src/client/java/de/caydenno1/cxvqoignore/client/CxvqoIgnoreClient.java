@@ -1,4 +1,4 @@
-package com.caydenno1.cxvqoignore.client;
+package de.caydenno1.cxvqoignore.client;
 
 import com.mojang.brigadier.builder.LiteralArgumentBuilder;
 import com.mojang.brigadier.context.CommandContext;
@@ -10,7 +10,7 @@ import net.fabricmc.fabric.api.client.message.v1.ClientReceiveMessageEvents;
 
 import net.minecraft.network.chat.Component;
 
-import com.caydenno1.cxvqoignore.CxvqoIgnore;
+import de.caydenno1.cxvqoignore.CxvqoIgnore;
 
 public class CxvqoIgnoreClient implements ClientModInitializer {
 	@Override

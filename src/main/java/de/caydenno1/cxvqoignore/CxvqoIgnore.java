@@ -1,4 +1,4 @@
-package com.caydenno1.cxvqoignore;
+package de.caydenno1.cxvqoignore;
 
 import java.util.regex.Pattern;
 

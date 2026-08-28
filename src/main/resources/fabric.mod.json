@@ -12,10 +12,10 @@
 	"environment": "client",
 	"entrypoints": {
 		"main": [
-			"com.caydenno1.cxvqoignore.CxvqoIgnore"
+			"de.caydenno1.cxvqoignore.CxvqoIgnore"
 		],
 		"client": [
-			"com.caydenno1.cxvqoignore.client.CxvqoIgnoreClient"
+			"de.caydenno1.cxvqoignore.client.CxvqoIgnoreClient"
 		]
 	},
 	"depends": {
