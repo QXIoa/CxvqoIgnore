@@ -1,7 +1,5 @@
 package de.caydenno1.cxvqoignore;
 
-import java.util.regex.Pattern;
-
 import net.fabricmc.api.ModInitializer;
 
 import net.minecraft.network.chat.Component;
@@ -14,11 +12,6 @@ public class CxvqoIgnore implements ModInitializer {
 
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
-	public static final Pattern IGNORE_PATTERN = Pattern.compile(
-		"(?:.*cxvqo.*)|(?:.*denisapain.*)",
-		Pattern.CASE_INSENSITIVE
-	);
-
 	private static boolean enabled = true;
 
 	public static boolean isEnabled() {
@@ -30,7 +23,7 @@ public class CxvqoIgnore implements ModInitializer {
 	}
 
 	public static boolean shouldIgnore(Component message) {
-		return enabled && IGNORE_PATTERN.matcher(message.getString()).matches();
+		return enabled && CxvqoIgnoreRegexes.shouldIgnore(message.getString());
 	}
 
 	@Override

@@ -16,10 +16,34 @@ By default the mod is enabled. Toggle it with:
 
 ## What it filters
 
-When enabled, any player or system chat message matching either of these regex patterns (case-insensitive) is silently ignored:
+When enabled, any player or system chat message matching any of the configured regex patterns (case-insensitive) is silently ignored.
+
+The default patterns are:
 
 - `/.*cxvqo.*/i`
 - `/.*denisapain.*/i`
+
+## Regex pattern management
+
+Patterns can be added, removed, and listed at runtime. Each pattern is matched against the whole message, so include `.*` on both sides to ignore messages that merely contain text. Added patterns are compiled case-insensitively.
+
+```
+/cxvqoignore addregex <regex>
+/cxvqoignore removeregex <index>
+/cxvqoignore listregex
+```
+
+- `addregex <regex>` — adds a new pattern, e.g. `/cxvqoignore addregex .*skiddie.*`. The regex must be valid Java regex syntax, or the mod reports an error.
+- `removeregex <index>` — removes the pattern at the given index (see the indexes shown by `listregex`).
+- `listregex` — lists every configured pattern, each prefixed with its index for use with `removeregex`.
+
+Example — ignore everyone whose name starts with "Foo":
+
+```
+/cxvqoignore addregex .*Foo.*
+/cxvqoignore listregex
+/cxvqoignore removeregex 2
+```
 
 ## Requirements
 
